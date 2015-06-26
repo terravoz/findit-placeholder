@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Find It Cambridge — Coming soon &hellip;</title>
+<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+<style>
+
+/* 
+Layout 
+-----------------------------------------------------------
+*/
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    line-height: 1.4em;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 2.8em 1em;
+    max-width: 56em;
+    overflow: auto;
+}
+
+header.pagehead {
+    color: #ffffff;
+    background-color: #eb8119;
+    overflow: hidden;
+}
+
+section.info {
+    overflow: auto;
+}
+
+@media (min-width: 48em) {
+    section.info article {
+        box-sizing: border-box;
+        padding-right: 2.8em;
+        float: left;
+        width: 50%;
+    }
+}
+
+section.form {
+    background: #e6e6e6;    
+}
+
+footer {
+    text-align: center;
+    color: #f8fcff;
+    background-color: #393d40;
+}
+
+.logos img {
+    margin-bottom: 1.4em;
+}
+
+.logos img + img {
+    margin-left: 1.4em;
+}
+
+
+hr {
+    margin: 4.2em 0;
+    border: 0;
+}
+
+hr::before {
+    display: block;
+    content: "";
+    margin: 0 auto;
+    height: 1px;
+    width: 65%;
+    background: -moz-linear-gradient(left,  rgba(111,116,119,0) 0%, rgba(111,116,119,1) 40%, rgba(111,116,119,1) 60%, rgba(111,116,119,0) 99%, rgba(111,116,119,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(111,116,119,0)), color-stop(40%,rgba(111,116,119,1)), color-stop(60%,rgba(111,116,119,1)), color-stop(99%,rgba(111,116,119,0)), color-stop(100%,rgba(111,116,119,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  rgba(111,116,119,0) 0%,rgba(111,116,119,1) 40%,rgba(111,116,119,1) 60%,rgba(111,116,119,0) 99%,rgba(111,116,119,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  rgba(111,116,119,0) 0%,rgba(111,116,119,1) 40%,rgba(111,116,119,1) 60%,rgba(111,116,119,0) 99%,rgba(111,116,119,0) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  rgba(111,116,119,0) 0%,rgba(111,116,119,1) 40%,rgba(111,116,119,1) 60%,rgba(111,116,119,0) 99%,rgba(111,116,119,0) 100%); /* IE10+ */
+    background: linear-gradient(to right,  rgba(111,116,119,0) 0%,rgba(111,116,119,1) 40%,rgba(111,116,119,1) 60%,rgba(111,116,119,0) 99%,rgba(111,116,119,0) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006f7477', endColorstr='#006f7477',GradientType=1 ); /* IE6-9 */
+}
+
+.montage {
+    position: relative;
+    width: 100%;
+    padding-bottom: 21.4%;
+}
+
+.montage > .placeholder {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #e6e6e6;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url('img/montage-sm.jpg');
+    background-size: cover;
+}
+
+@media (min-width: 48em) {
+    .montage .placeholder {
+        background-image: url('img/montage-lg.jpg');
+    }
+}
+
+/* 
+Typography 
+-----------------------------------------------------------
+*/
+
+@media (min-width: 75em) {
+    body {
+        font-size: 120%;
+    }
+}
+
+h1 {
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 1.625em;
+    line-height: 1.25em;
+    text-transform: uppercase;
+}
+
+.pagehead h1 {
+    text-shadow: 1px 0 3px rgba(0,0,0,.3);
+}
+
+article h1 {
+    color: #3f4447;
+}
+
+.findit {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: #eb8119;
+}
+.cambridge {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    color: #eb8119;
+}
+
+.pagehead .findit, 
+.pagehead .cambridge {
+    color: #fff;
+}
+
+a {
+    color: #eb8119;
+}
+
+a:hover {
+    color: #000000;
+    background-color: #eb8119;
+    text-decoration: none;
+}
+
+.dim {
+    transition: 1s opacity ease;
+    opacity: 0.4;
+}
+
+
+/* 
+Mail Chimp Form 
+-----------------------------------------------------------
+*/
+
+form {
+    position: relative;
+    margin-bottom: 1.4em;
+}
+
+@media (min-width: 48em) {
+    form {
+        box-sizing: border-box;
+        padding-left: 50%;
+    }
+}
+
+form h2 {
+    margin-top: 0;
+    margin-bottom: 1.4em;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 1.625em;
+    line-height: 1.4em;
+    text-transform: uppercase;
+    color: #3f4447;
+}
+
+@media (min-width: 48em) {
+    form header {
+        position: absolute;
+        margin: 0;
+        left: 0;
+        top: 0;
+        width: 46%;
+    }
+}
+
+form .mc-field-group {
+    margin-bottom: 1.4em;
+}
+
+form .mc-field-group strong {
+    font-size: .875em;
+    text-transform: uppercase;
+}
+
+form .indicates-required {
+    margin-bottom: 1.4em;
+    font-size: .875em;
+    font-style: italic;
+}
+
+form label {
+    display: block;
+    font-size: .875em;
+    text-transform: uppercase;
+}
+
+form input[type="email"], 
+form input[type="text"] {
+    padding: .35em;
+    font-size: 1em;
+    line-height: 1.4em;
+    width: 100%;
+}
+
+form .input-group ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+form .input-group label {
+    display: inline-block;
+}
+
+form input[type="submit"] {
+    border: 0;
+    -webkit-border-radius: 5px;
+            border-radius: 5px; 
+    padding: .35em 1.4em;
+    font-size: 1em;
+    line-height: 1.4em;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: #eb8119; 
+    cursor: pointer;
+} 
+
+form input[type="submit"]:hover {
+    background-color: #393d40;
+}
+
+
+</style>
+</head>
+<body>
+
+
+<header class="pagehead">
+    <div class="container">
+        <h1><span class="findit">Find It</span> <span class="cambridge">Cambridge</span></h1>
+    </div>
+</header>
+
+
+<div class="montage">
+    <div class="placeholder"></div>
+</div>
+
+
+<section class="info">
+    <div class="container">
+        <article lang="en">
+            <h1>Your gateway to children, youth, and family opportunities in the City of Cambridge</h1>
+            <h4>Coming soon &hellip;</h4>
+            <p>The <span class="findit">Find It</span> <span class="cambridge">Cambridge</span> website will make it easier for parents and other caring adults to find the amazing array of activities, services, and resources that are available for children, youth and families in Cambridge, MA.</p>
+            <p>Please sign up to receive updates about Find It Cambridge and how to get involved with this exciting initiative.</p>
+        </article>    
+        <article lang="es">
+            <h1>Tu punto de entrada a las oportunidades para niños, jóvenes y familias en la ciudad de Cambridge</h1>
+            <h4>Muy pronto &hellip;</h4>
+            <p><span class="findit">Find It</span> <span class="cambridge">Cambridge</span>  hará más fácil para los padres y otros adultos que ven por el bienestar de los niños para que conozcan la gran variedad de actividades, servicios y recursos que están disponibles para los niños , jóvenes y familias en Cambridge, MA.</p>
+            <p>Por favor subscribase para recibir actualizaciones sobre Find It Cambridge  y descubrir cómo involucrarse con esta iniciativa tan interesante.</p>
+        </article>    
+    </div>
+</section>
+
+   
+<section class="form">
+    <div class="container">
+        <!-- Begin MailChimp Signup Form -->
+        <div id="mc_embed_signup">
+        <form action="http://finditcambridge.us11.list-manage.com/subscribe/post?u=74309c1fbac095a9eb9c7cad9&amp;id=ab76c3b992" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll">
+            <header>
+                <h2 lang="en">Sign up for<br> <span class="findit">Find It</span>&nbsp;<span class="cambridge">Cambridge</span><br> news</h2>
+                <h2 lang="es">Subscribase para recibir informacciones sobre <span class="findit">Find It</span>&nbsp;<span class="cambridge">Cambridge</span></h2>
+            </header>
+        <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+        <div class="mc-field-group">
+            <label for="mce-EMAIL"><span lang="en">Email Address</span> / <span lang="es">Correo electrónico</span> <span class="asterisk">*</span>
+        </label>
+            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+        </div>
+        <div class="mc-field-group">
+            <label for="mce-FNAME"><span lang="en">First Name</span> / <span lang="es">Primer nombre</span> </label>
+            <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+        </div>
+        <div class="mc-field-group">
+            <label for="mce-LNAME"><span lang="en">Last Name</span> / <span lang="es">Apellido</span> </label>
+            <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+        </div>
+        <div class="mc-field-group input-group">
+            <strong><span lang="en">Preferred language(s)</span> / <span lang="es">Language preferido</span> </strong>
+            <ul><li><input type="checkbox" value="1" name="group[4393][1]" id="mce-group[4393]-4393-0"><label for="mce-group[4393]-4393-0">English</label></li>
+        <li><input type="checkbox" value="2" name="group[4393][2]" id="mce-group[4393]-4393-1"><label for="mce-group[4393]-4393-1">Español</label></li>
+        <li><input type="checkbox" value="4" name="group[4393][4]" id="mce-group[4393]-4393-2"><label for="mce-group[4393]-4393-2">汉语</label></li>
+        <li><input type="checkbox" value="8" name="group[4393][8]" id="mce-group[4393]-4393-3"><label for="mce-group[4393]-4393-3">Kreyòl</label></li>
+        </ul>
+        </div>
+        <div class="mc-field-group input-group">
+            <strong><span lang="en">Email Format</span> / <span lang="es">Formato del correo electrónico</span> </strong>
+            <ul><li><input type="radio" value="html" name="EMAILTYPE" id="mce-EMAILTYPE-0"><label for="mce-EMAILTYPE-0">html</label></li>
+        <li><input type="radio" value="text" name="EMAILTYPE" id="mce-EMAILTYPE-1"><label for="mce-EMAILTYPE-1">text</label></li>
+        </ul>
+        </div>
+            <div id="mce-responses" class="clear">
+                <div class="response" id="mce-error-response" style="display:none"></div>
+                <div class="response" id="mce-success-response" style="display:none"></div>
+            </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;"><input type="text" name="b_74309c1fbac095a9eb9c7cad9_ab76c3b992" tabindex="-1" value=""></div>
+            <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+            </div>
+        </form>
+        </div>
+        <!--End mc_embed_signup-->
+    </div>
+</section>
+
+
+<footer>
+    <div class="container">
+        <p>Find It Cambridge is an initiative of the City of Cambridge’s Kids’ Council in partnership with Code for Boston.</p>
+        <hr>
+        <div class="logos">
+            <img src="img/logo-cambridge-seal-inverse.png" alt="Cambridge Seal">
+            <img src="img/logo-kids-council-inverse.png" alt="Cambridge’s Kids’ Council Logo">
+            <img src="img/logo-code-for-boston-inverse.png" alt="Code for Boston Logo">
+        </div>
+    </div>
+</footer>
+
+   
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+$( document ).ready(function() {
+    $(":lang(en)").mouseover(function() {
+        $(":lang(es)").addClass('dim');
+    }).mouseout(function() {
+        $(":lang(es)").removeClass('dim');
+    });
+    $(":lang(es)").mouseover(function() {
+        $(":lang(en)").addClass('dim');
+    }).mouseout(function() {
+        $(":lang(en)").removeClass('dim');
+    });
+});
+</script>
+</body>
+</html>
