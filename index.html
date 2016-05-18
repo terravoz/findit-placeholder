@@ -256,7 +256,7 @@ form .input-group label {
     display: inline-block;
 }
 
-form input[type="submit"] {
+form input[type="submit"], button {
     border: 0;
     -webkit-border-radius: 5px;
             border-radius: 5px; 
@@ -272,8 +272,39 @@ form input[type="submit"] {
 form input[type="submit"]:hover {
     background-color: #393d40;
 }
+    
+section.providers {
+    color: #ffffff;
+    background-color: #eb8119;
+    overflow: auto;
+}   
+    
+    
+    
+.providers  button {
+    color: #eb8119;
+    background: #ffffff; 
+}   
+    
+.providers header {
 
+}    
 
+.providers main {
+
+}    
+    
+@media (min-width: 48em) {
+    section.providers header,
+    section.providers main {
+        box-sizing: border-box;
+        padding-right: 2.8em;
+        float: left;
+        width: 50%;
+    }
+}    
+
+    
 </style>
 </head>
 <body>
@@ -281,7 +312,7 @@ form input[type="submit"]:hover {
 
 <header class="pagehead">
     <div class="container">
-        <h1><span class="findit">Find It</span> <span class="cambridge">Cambridge</span></h1>
+        <img src="img/findit-cambridge.png" alt="Find It Cambridge Logo">
     </div>
 </header>
 
@@ -369,6 +400,20 @@ form input[type="submit"]:hover {
     </div>
 </section>
 
+   
+<section class="providers">
+    <div class="container">
+        <article lang="en">
+           <header>
+                <h1>Providers can Sign up now</h1>
+           </header>
+           <main>
+                <p>Service providers, it is time to add your organization and programs to Find It Cambridge.</p>
+                <a href="http://stage.finditcambridge.org"><button>Click here to sign up.</button></a>
+           </main>
+        </article>
+    </div>
+</section>   
 
 <footer>
     <div class="container">
@@ -377,7 +422,7 @@ form input[type="submit"]:hover {
         <hr>
         <div class="logos">
             <img src="img/logo-cambridge-seal-inverse.png" alt="Cambridge Seal">
-            <img src="img/logo-kids-council-inverse.png" alt="Cambridge’s Kids’ Council Logo">
+            <img src="img/family-policy-council.png" alt="Family Policy Council Logo">
             <img src="img/logo-code-for-boston-inverse.png" alt="Code for Boston Logo">
         </div>
     </div>
